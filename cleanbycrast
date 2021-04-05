@@ -18,29 +18,34 @@ echo "
  \____|_|\___|\__,_|_| |_|____/ \__, |\____|_|  \__,_|___/\__(_)
                                 |___/ "
 
-
 echo -e "Cleaning log files,this can take up a bit.\n"
 
 rm -rf /var/log/*
 echo -e "[+]Removing everything in /var/log...\n"
 
-rm -rf /var/apache/logs
+rm -rf /var/apache/logs/*
 echo -e "[+]Removing everything in /var/apache/logs...\n"
 
-rm -rf /var/apache/log
+rm -rf /var/apache/log/*
 echo -e "[+]Removing everything in /var/apache/log...\n"
 
-rm -rf /usr/local/apache/log
+rm -rf /usr/local/apache/log/*
 echo -e "[+]Removing everything in /usr/local/apache/log...\n"
 
-rm -rf /usr/local/apache/logs
+rm -rf /usr/local/apache/logs/*
 echo -e "[+]Removing everything in /usr/local/apache/logs...\n"
 
 echo Cleaned! > /root/.history
 echo -e "[+]Removing everything in /root/.history...\n" 
 
+echo Cleaned! > $HOME/.zsh_history
+echo -e "[+]Removing everything in /home/username/.zsh_history...\n" 
+
 echo Cleaned! > /root/*_history
 echo -e "[+]Removing everything in /root/*_history...\n"
+
+echo Cleaned! > /root/.zsh_history
+echo -e "[+]Removing everything in /root/.zsh_history...\n"
 
 echo "Donee! Everywhere looks better now!"
 
