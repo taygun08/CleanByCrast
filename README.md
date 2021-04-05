@@ -1,7 +1,7 @@
 # CleanByCrast
 CleanByCrast is a free and open source log cleaner project designed for Linux.
-
-```\ \      / /__| | ___ ___  _ __ ___   ___  | |_ ___  
+```
+\ \      / /__| | ___ ___  _ __ ___   ___  | |_ ___  
  \ \ /\ / / _ \ |/ __/ _ \|     _ \ / _ \ | __/ _ \ 
   \ V  V /  __/ | (_| (_) | | | | | |  __/ | || (_)|
    \_/\_/ \___|_|\___\___/|_| |_| |_|\___|  \__\___/                                                
@@ -10,8 +10,8 @@ CleanByCrast is a free and open source log cleaner project designed for Linux.
 | |   | |/ _ \/ _  |  _ \|  _ \| | | | |   | '__/ _  / __| __| |
 | |___| |  __/ (_| | | | | |_) | |_| | |___| | | (_| \__ \ |_|_|
  \____|_|\___|\__,_|_| |_|____/ \__, |\____|_|  \__,_|___/\__(_)
-                                |___/   ```
-
+                                |___/  
+```
 **English:** 
 
 To install and setup **CleanByCrast**, you need to follow some simple steps.
