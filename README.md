@@ -2,12 +2,13 @@
 CleanByCrast is a free and open source log cleaner project designed for Linux.
 CleanByCrast Linux işletim sistemi için tasarlanmış ücretsiz ve açık kaynaklı bir log temizleme projesidir.
 ```
-                                              
+--------------------------------------------------------------                                             
  / ___| | ___  __ _ _ __ | __ ) _   _ / ___|_ __ __ _ ___| |_
 | |   | |/ _ \/ _  |  _ \|  _ \| | | | |   | '__/ _  / __| __|
 | |___| |  __/ (_| | | | | |_) | |_| | |___| | | (_| \__ \ |_
  \____|_|\___|\__,_|_| |_|____/ \__, |\____|_|  \__,_|___/\__|
                                 |___/  
+--------------------------------------------------------------
 ```
 **English:** 
 
