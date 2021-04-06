@@ -12,6 +12,8 @@ CleanByCrast, Linux işletim sistemi için tasarlanmış ücretsiz ve açık kay
 ```
 **English:** 
 
+**DISCLAIMER: PLEASE USE THIS PROGRAM WHEN NO OTHER PROGRAM IS RUNNING!!! **
+
 To install and setup **CleanByCrast**, you need to follow some simple steps.
 
 First, open a new terminal and clone the Github repository by typing the command below:
@@ -25,6 +27,7 @@ Lastly, run the **cleanbycrast.sh** file as root by typing ```sudo bash cleanbyc
 Thank you for choosing **CleanByCrast** as your log cleaner!
 
 **Türkçe:**
+**UYARI: LÜTFEN BU PROGRAMI BAŞKA HİÇBİR PROGRAM ÇALIŞMIYORKEN KULLANIN!!!**
 
 **CleanByCrast**'ı indirmek ve kurmak için basit birkaç adımı takip etmeniz gerekir.
 
