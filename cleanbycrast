@@ -3,7 +3,7 @@
 SYSTEM_USER_NAME=$(id -un)
 if [[ "${SYSTEM_USER_NAME}" != 'root'  ]]
 then
-    echo 'You are not running the script as root!'
+    echo -e "\e[1;36m Please run me as root! / Lütfen beni root olarak çalıştırın!\e[1m \n"
     exit 1
 fi
 echo -e "\e[1;34m
@@ -18,159 +18,199 @@ echo -e "\e[1;34m
 read -p "Enlish[1] / Türkçe [2] $foo? [1/2]:" answer
 if [[ $answer = 1  ]] ; then
 
-  echo -e "\e[1;32m [+]Cleaning log files,this process takes about a minute.\e[1m \n"
+  echo -e "\e[1;36m [+]Cleaning log and cache files,this process takes about a minute.\e[1m \n"
 sleep 1
 
-rm -rf /var/log/*
-sleep 0.5
-
-rm -rf /var/apache/logs/*
-sleep 0.5
-
-rm -rf /usr/lib/dradis/ruby/2.7.0/gems/dradis-plugins-3.20.0/spec/internal/log/*
+sync; echo 3 > /proc/sys/vm/drop_caches 
 sleep 0.5 
 
-rm -rf /usr/lib/dradis/ruby/2.7.0/gems/bootstrap-4.3.1/test/dummy_rails/log/*
+echo "" >/var/log/*
 sleep 0.5
 
-rm -rf /usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit_data_models-4.1.1/spec/dummy/log/*
+
+#echo "" >/var/apache/logs/*
+#sleep 0.5
+
+if [[ -f /var/apache/logs/* ]]
+then	
+  	echo "" > /var/apache/logs/*
+	sleep 0.5
+fi
+
+echo "" >/var/apache2/logs/*
 sleep 0.5
 
-rm -rf /var/apache/log/*
+echo "" >/tmp/*
 sleep 0.5
 
-rm -rf /usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/arel-helpers-2.12.0/spec/internal/log/*
+echo "" >/usr/lib/dradis/ruby/2.7.0/gems/dradis-plugins-3.20.0/spec/internal/log/*
+sleep 0.5 
+
+echo "" >/usr/lib/dradis/ruby/2.7.0/gems/bootstrap-4.3.1/test/dummy_rails/log/*
 sleep 0.5
 
-rm -rf /usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/aws-sdk-core-3.112.0/lib/aws-sdk-core/log/*
+echo "" >/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit_data_models-4.1.1/spec/dummy/log/*
 sleep 0.5
 
-rm -rf /usr/share/paros/log/*
+echo "" >/var/apache/log/*
 sleep 0.5
 
-rm -rf usr/share/paros/log/*
+echo "" >/var/apache2/log/*
 sleep 0.5
 
-rm -rf /usr/local/apache/log/*
+echo "" >/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/arel-helpers-2.12.0/spec/internal/log/*
 sleep 0.5
 
-rm -rf /usr/local/psa/admin/logs/httpsd_access_log/*
+echo "" >/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/aws-sdk-core-3.112.0/lib/aws-sdk-core/log/*
 sleep 0.5
 
-rm -rf /usr/local/psa/admin/logs/panel.log/*
+echo "" >/usr/share/paros/log/*
 sleep 0.5
 
-rm -rf /usr/share/legion/log/*
+echo "" >usr/share/paros/log/*
 sleep 0.5
 
-rm -rf $HOME/.ZAP/jbrofuzz/log/*
+echo "" >/usr/local/apache/log/*
 sleep 0.5
 
-rm -rf /usr/local/apache/logs/*
+echo "" >/usr/local/apache2/log/*
 sleep 0.5
 
-rm -rf /etc/sv/tor/log/*
+echo "" >/usr/local/psa/admin/logs/httpsd_access_log/*
 sleep 0.5
 
-rm -rf /usr/lib/dradis/ruby/2.7.0/gems/combustion-0.6.0/spec/dummy/spec/internal/log/*
+echo "" >/usr/local/psa/admin/logs/panel.log/*
 sleep 0.5
 
-rm -rf /etc/sv/ssh/log/*
+echo "" >/usr/share/legion/log/*
 sleep 0.5
 
-rm -rf /run/log/*
+echo "" >$HOME/.ZAP/jbrofuzz/log/*
 sleep 0.5
 
-echo Nothing to see here! > /root/.history
+echo "" >/usr/local/apache/logs/*
 sleep 0.5
 
-echo Nothing to see here! > $HOME/.zsh_history
+echo "" >/usr/local/apache2/logs/*
 sleep 0.5
 
-echo Nothing to see here! > /root/*_history
+echo "" >/etc/sv/tor/log/*
 sleep 0.5
 
-echo Nothing to see here! > /root/.zsh_history
+echo "" > /usr/lib/dradis/ruby/2.7.0/gems/combustion-0.6.0/spec/dummy/spec/internal/log/*
+sleep 0.5
+
+echo "" > /etc/sv/ssh/log/*
+sleep 0.5
+
+echo "" > /run/log/*
+sleep 0.5
+
+echo "" > /root/.history
+sleep 0.5
+
+echo "" > $HOME/.zsh_history
+sleep 0.5
+
+echo "" > /root/*_history
+sleep 0.5
+
+echo "" > /root/.zsh_history
 sleep 1
 
 echo -e "\e[1;33m Donee! Everywhere looks tidier now :)\e[1m \n"
 sleep 1
 exit 1
 else 
-  echo -e "\e[1;32m [+]Log dosyaları temizleniyor, bu işlem ortalama 1 dakika sürer.\e[1m \n"
+  echo -e "\e[1;32m [+]Log ve cache dosyaları temizleniyor, bu işlem ortalama 1 dakika sürer.\e[1m \n"
 sleep 1
 
-rm -rf /var/log/*
+echo "" >/var/log/*
 sleep 0.5
 
-rm -rf /var/apache/logs/*
+echo "" >/var/apache/logs/*
 sleep 0.5
 
-rm -rf /usr/lib/dradis/ruby/2.7.0/gems/dradis-plugins-3.20.0/spec/internal/log/*
+echo "" >/usr/lib/dradis/ruby/2.7.0/gems/dradis-plugins-3.20.0/spec/internal/log/*
 sleep 0.5 
 
-rm -rf /usr/lib/dradis/ruby/2.7.0/gems/bootstrap-4.3.1/test/dummy_rails/log/*
+echo "" >/usr/lib/dradis/ruby/2.7.0/gems/bootstrap-4.3.1/test/dummy_rails/log/*
 sleep 0.5
 
-rm -rf /usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit_data_models-4.1.1/spec/dummy/log/*
+echo "" >/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit_data_models-4.1.1/spec/dummy/log/*
 sleep 0.5
 
-rm -rf /var/apache/log/*
+echo "" >/var/apache/log/*
 sleep 0.5
 
-rm -rf /usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/arel-helpers-2.12.0/spec/internal/log/*
+echo "" >/var/apache2/log/*
 sleep 0.5
 
-rm -rf /usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/aws-sdk-core-3.112.0/lib/aws-sdk-core/log/*
+echo "" >/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/arel-helpers-2.12.0/spec/internal/log/*
 sleep 0.5
 
-rm -rf /usr/share/paros/log/*
+echo "" >/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/aws-sdk-core-3.112.0/lib/aws-sdk-core/log/*
 sleep 0.5
 
-rm -rf usr/share/paros/log/*
+echo "" >/usr/share/paros/log/*
 sleep 0.5
 
-rm -rf /usr/local/apache/log/*
+echo "" >/usr/share/paros/log/*
 sleep 0.5
 
-rm -rf /usr/local/psa/admin/logs/httpsd_access_log/*
+echo "" >/usr/local/apache/log/*
 sleep 0.5
 
-rm -rf /usr/local/psa/admin/logs/panel.log/*
+echo "" >/usr/local/apache2/log/*
 sleep 0.5
 
-rm -rf /usr/share/legion/log/*
+echo "" >/usr/local/psa/admin/logs/httpsd_access_log/*
 sleep 0.5
 
-rm -rf $HOME/.ZAP/jbrofuzz/log/*
+echo "" >/usr/local/psa/admin/logs/panel.log/*
 sleep 0.5
 
-rm -rf /usr/local/apache/logs/*
+echo "" >/usr/share/legion/log/*
 sleep 0.5
 
-rm -rf /etc/sv/tor/log/*
+echo "" >$HOME/.ZAP/jbrofuzz/log/*
 sleep 0.5
 
-rm -rf /usr/lib/dradis/ruby/2.7.0/gems/combustion-0.6.0/spec/dummy/spec/internal/log/*
+echo "" >/usr/local/apache/logs/*
 sleep 0.5
 
-rm -rf /etc/sv/ssh/log/*
+echo "" >/usr/local/apache2/logs/*
 sleep 0.5
 
-rm -rf /run/log/*
+echo "" >/etc/sv/tor/log/*
 sleep 0.5
 
-echo Burada görülecek bir şey yok! > /root/.history
+echo "" >/tmp/*
 sleep 0.5
 
-echo Burada görülecek bir şey yok! > $HOME/.zsh_history
+echo "" >/usr/lib/dradis/ruby/2.7.0/gems/combustion-0.6.0/spec/dummy/spec/internal/log/*
 sleep 0.5
 
-echo Burada görülecek bir şey yok! > /root/*_history
+echo "" >/etc/sv/ssh/log/*
 sleep 0.5
 
-echo Burada görülecek bir şey yok! > /root/.zsh_history
+echo "" >/run/log/*
+sleep 0.5
+
+echo "" > /root/.history
+sleep 0.5
+
+echo "" > $HOME/.zsh_history
+sleep 0.5
+
+echo "" > /root/*_history
+sleep 0.5
+
+echo "" > /root/.zsh_history
 sleep 1
+
+sync; echo 3 > /proc/sys/vm/drop_caches 
+sleep 0.5
 
 echo -e "\e[1;33m Bittii! Ortalık şimdi daha derli toplu görünüyor :)\e[1m \n"
 sleep 1
